@@ -5,7 +5,7 @@ import scala.io.Source
 object FuelCalculator {
 
   def main(args: Array[String]): Unit = {
-    val mass = Source.fromResource("input.txt").getLines.toList.map(_.toInt)
+    val mass = Source.fromResource("day1/input.txt").getLines.toList.map(_.toInt)
     println(mass.map(calculateFuel(_)).reduce(_ + _)) // 3265923
 
     println(mass.map({
