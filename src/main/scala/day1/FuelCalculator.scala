@@ -8,10 +8,10 @@ object FuelCalculator {
     val mass = Source.fromResource("day1/input.txt").getLines.toList.map(_.toInt)
 
     //part1
-    println(mass.map(calculateFuel(_)).reduce(_ + _)) // 3265923
+    println(mass.map(calculateFuel(_)).sum) // 3265923
 
     //part2
-    println(mass.map(m => calculationAdditionalFuel(m, 0)).reduce(_ + _)) //4896020
+    println(mass.map(m => calculationAdditionalFuel(m, 0)).sum) //4896020
   }
 
   private def calculateFuel(mass: Double) = Math.floor(mass / 3) - 2

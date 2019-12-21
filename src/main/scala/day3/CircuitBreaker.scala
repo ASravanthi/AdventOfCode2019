@@ -16,12 +16,12 @@ object CircuitBreaker {
     val crossLocations = coordinatesCoveredW1.intersect(coordinatesCoveredW2)
 
     //part1
-    println(crossLocations.map(getManhattanDistance(centralPort, _)).reduce(_ min _)) // 308
+    println(crossLocations.map(getManhattanDistance(centralPort, _)).min) // 308
 
     //part2
     println(crossLocations.map(c => {
       coordinatesCoveredW1.filter(_ == c)(0).stepsTakenFromCentralPort + coordinatesCoveredW2.filter(_ == c)(0).stepsTakenFromCentralPort
-    }).reduce(_ min _)) //12934
+    }).min) //12934
   }
 
   private def getManhattanDistance(from: Coordinate, to: Coordinate) = {
