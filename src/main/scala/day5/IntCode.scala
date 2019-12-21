@@ -8,7 +8,7 @@ object IntCode {
 
   def main(args: Array[String]): Unit = {
     val pInput = Source.fromResource("day5/input.txt").getLines().toList(0).split(",").map(_.toInt)
-//    val input = 1 //part1
+    //    val input = 1 //part1
     val input = 5 //part2
 
     printDiagnosticCode(pInput, input)
@@ -25,7 +25,7 @@ object IntCode {
         val opcode = instruction.substring(3, 5).toInt
         val mode1 = instruction.substring(2, 3).toInt
         val mode2 = instruction.substring(1, 2).toInt
-//        val mode3 = instruction.substring(0, 1).toInt
+        //        val mode3 = instruction.substring(0, 1).toInt
 
         opcode match {
           case 1 => {
